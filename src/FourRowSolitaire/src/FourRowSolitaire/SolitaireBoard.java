@@ -92,7 +92,7 @@ public class SolitaireBoard extends JFrame
         setTitle("Four Row Solitaire");
         setSize(800,700);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         setResizable(false);
         setIconImage(new ImageIcon(getClass().getResource("images/logo.png")).getImage());
 
@@ -1818,7 +1818,7 @@ public class SolitaireBoard extends JFrame
                 recordGame(SolitaireBoard.GAME_SAVED);
                 System.exit(0);
             }
-            else //if(save == JOptionPane.NO_OPTION)
+            else if(save == JOptionPane.NO_OPTION)
             {
                 recordGame(SolitaireBoard.GAME_LOST);
                 System.exit(0);
