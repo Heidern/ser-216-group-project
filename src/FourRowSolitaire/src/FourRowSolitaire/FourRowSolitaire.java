@@ -517,6 +517,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
                     "\nSimilarities to FreeCell:\n" +
                     "   -The Cards in the columns are always visible\n" +
                     "   -There are four individual cells at the top\n" +
+		    "   -Fill Ace piles with Kings to win the game.\n" +
                     "\nSimilarities to Solitaire:\n" +
                     "   -There is a deck and discard pile to draw cards from\n" +
                     "   -Only Kings may be placed at the top of an empty column\n" +
