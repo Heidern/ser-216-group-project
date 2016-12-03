@@ -89,16 +89,20 @@ public class SolitaireBoard extends JFrame
 
     public SolitaireBoard()
     {
+    	this (true);
+    }
+    
+    public SolitaireBoard(boolean addResourceReferences) {
         setTitle("Four Row Solitaire");
         setSize(800,700);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        setIconImage(new ImageIcon(getClass().getResource("images/logo.png")).getImage());
+        if (addResourceReferences) setIconImage(new ImageIcon(getClass().getResource("images/logo.png")).getImage());
 
         setVisible(true);
 
-        addWindowListener(wl);
+        addWindowListener(wl);   	
     }
 
     public void createBoard(LinkedList<Integer> cards)
@@ -431,7 +435,7 @@ public class SolitaireBoard extends JFrame
         recordGame(DO_NOTHING);
     }
 
-    private void recordGame(int winOrLoss)
+    public void recordGame(int winOrLoss)
     {
         int count = 0, temp = 0;
         int gamesPlayed1e = 0, gamesWon1e = 0, winStreak1e = 0, lossStreak1e = 0,
@@ -1818,7 +1822,7 @@ public class SolitaireBoard extends JFrame
                 recordGame(SolitaireBoard.GAME_SAVED);
                 System.exit(0);
             }
-            else //if(save == JOptionPane.NO_OPTION)
+            else if(save == JOptionPane.NO_OPTION)
             {
                 recordGame(SolitaireBoard.GAME_LOST);
                 System.exit(0);

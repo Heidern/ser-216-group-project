@@ -244,7 +244,7 @@ public class SolitaireLayout implements LayoutManager
 
         if((comp = discardPile) != null)
         {
-        comp.setBounds(650,318,72,96);
+        comp.setBounds(650,318,102,96);
         }
         if((comp = deck) != null)
         {
