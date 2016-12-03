@@ -89,16 +89,20 @@ public class SolitaireBoard extends JFrame
 
     public SolitaireBoard()
     {
+    	this (true);
+    }
+    
+    public SolitaireBoard(boolean addResourceReferences) {
         setTitle("Four Row Solitaire");
         setSize(800,700);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        setIconImage(new ImageIcon(getClass().getResource("images/logo.png")).getImage());
+        if (addResourceReferences) setIconImage(new ImageIcon(getClass().getResource("images/logo.png")).getImage());
 
         setVisible(true);
 
-        addWindowListener(wl);
+        addWindowListener(wl);   	
     }
 
     public void createBoard(LinkedList<Integer> cards)
