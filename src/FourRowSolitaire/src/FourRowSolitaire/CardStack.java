@@ -41,6 +41,7 @@ public class CardStack extends JLayeredPane
     {
         cards.add(card);
         card.setBounds(0, 0, 102, 96);
+        card.setBounds(0, 0, 120, 96);
         add(card, 0);
     }
 
@@ -56,7 +57,7 @@ public class CardStack extends JLayeredPane
     public Card push(Card card)
     {
         cards.add(card);
-        card.setBounds(0, 0, 102, 96);
+        card.setBounds(0, 0, 120, 96);
         add(card, 0);
         return card;
     }
